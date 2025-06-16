@@ -1,0 +1,7 @@
+streamlit
+pdfplumber
+google-generativeai
+langchain
+faiss-cpu
+langchain-google-genai
+langchain-community
