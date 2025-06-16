@@ -53,7 +53,10 @@ def query_pdf(vectorstore: FAISS, query: str) -> str:
 
 # Streamlit UI
 st.title("📄📚 RAG Chatbot on Streamlit with Google Gemini")
-
+st.set_page_config(
+    page_title="📄📚 RAG Chatbot",
+    layout="wide",
+)
 # PDF uploader
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 
