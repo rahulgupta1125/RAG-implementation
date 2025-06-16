@@ -1,5 +1,12 @@
 import os
 import streamlit as st
+
+# Configure the Streamlit app to use a wide layout
+st.set_page_config(
+    page_title="📄📚 RAG Chatbot",
+    layout="wide",
+)
+
 import pdfplumber
 import google.generativeai as genai
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, GoogleGenerativeAI
@@ -53,10 +60,7 @@ def query_pdf(vectorstore: FAISS, query: str) -> str:
 
 # Streamlit UI
 st.title("📄📚 RAG Chatbot on Streamlit with Google Gemini")
-st.set_page_config(
-    page_title="📄📚 RAG Chatbot",
-    layout="wide",
-)
+
 # PDF uploader
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 
